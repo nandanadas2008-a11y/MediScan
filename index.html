@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦠 Disease Diagnosis Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🦠 Disease Diagnosis Hub</h1>
+            <p>Enter symptoms to identify diseases, causative organisms, and treatments</p>
+        </header>
+
+        <nav>
+            <a href="#" class="nav-link active" data-page="home">🏠 Home</a>
+            <a href="#" class="nav-link" data-page="bacterial">🦠 Bacterial</a>
+            <a href="#" class="nav-link" data-page="viral">🧬 Viral</a>
+            <a href="#" class="nav-link" data-page="fungal">🍄 Fungal</a>
+            <a href="#" class="nav-link" data-page="protozoan">🪳 Protozoan</a>
+        </nav>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="search-container">
+                <input type="text" id="symptomSearch" class="search-box" placeholder="Enter symptoms (e.g., fever cough, skin rash, diarrhea...)">
+                <br><br>
+                <button class="search-btn" onclick="searchSymptoms()">🔍 Diagnose Disease</button>
+            </div>
+            <div id="searchResults" class="results"></div>
+        </div>
+
+        <!-- Category Pages -->
+        <div id="bacterial" class="page">
+            <div class="category-section">
+                <h2>🦠 Bacterial Diseases</h2>
+                <div class="disease-grid" id="bacterialGrid"></div>
+            </div>
+        </div>
+
+        <div id="viral" class="page">
+            <div class="category-section">
+                <h2>🧬 Viral Diseases</h2>
+                <div class="disease-grid" id="viralGrid"></div>
+            </div>
+        </div>
+
+        <div id="fungal" class="page">
+            <div class="category-section">
+                <h2>🍄 Fungal Diseases</h2>
+                <div class="disease-grid" id="fungalGrid"></div>
+            </div>
+        </div>
+
+        <div id="protozoan" class="page">
+            <div class="category-section">
+                <h2>🪳 Protozoan Diseases</h2>
+                <div class="disease-grid" id="protozoanGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mechanism Modal -->
+    <div id="mechanismModal" class="mechanism-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
